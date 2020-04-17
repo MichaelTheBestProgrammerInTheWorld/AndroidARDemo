@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+android {
+    compileSdkVersion 29
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.androidardemo"
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.6.0'
+}
+
+
+sceneform.asset('sampledata/models/bear.fbx',
+        'default',
+        'sampledata/models/bear.sfa',
+        'src/main/res/raw/bear')
+
+sceneform.asset('sampledata/models/cat.fbx',
+        'default',
+        'sampledata/models/cat.sfa',
+        'src/main/res/raw/cat')
+
+sceneform.asset('sampledata/models/cow.fbx',
+        'default',
+        'sampledata/models/cow.sfa',
+        'src/main/res/raw/cow')
+
+sceneform.asset('sampledata/models/dog.fbx',
+        'default',
+        'sampledata/models/dog.sfa',
+        'src/main/res/raw/dog')
+
+sceneform.asset('sampledata/models/elephant.fbx',
+        'default',
+        'sampledata/models/elephant.sfa',
+        'src/main/res/raw/elephant')
+
+sceneform.asset('sampledata/models/ferret.fbx',
+        'default',
+        'sampledata/models/ferret.sfa',
+        'src/main/res/raw/ferret')
+
+sceneform.asset('sampledata/models/hippopotamus.fbx',
+        'default',
+        'sampledata/models/hippopotamus.sfa',
+        'src/main/res/raw/hippopotamus')
+
+sceneform.asset('sampledata/models/horse.fbx',
+        'default',
+        'sampledata/models/horse.sfa',
+        'src/main/res/raw/horse')
+
+sceneform.asset('sampledata/models/koala_bear.fbx',
+        'default',
+        'sampledata/models/koala_bear.sfa',
+        'src/main/res/raw/koala_bear')
+
+sceneform.asset('sampledata/models/lion.fbx',
+        'default',
+        'sampledata/models/lion.sfa',
+        'src/main/res/raw/lion')
+
+sceneform.asset('sampledata/models/reindeer.fbx',
+        'default',
+        'sampledata/models/reindeer.sfa',
+        'src/main/res/raw/reindeer')
+
+sceneform.asset('sampledata/models/wolverine.fbx',
+        'default',
+        'sampledata/models/wolverine.sfa',
+        'src/main/res/raw/wolverine')
